@@ -1,0 +1,51 @@
+FRANKA MEDIAPIPE BODY + HAND CONTROL - QUICK START
+=================================================
+
+ONE TIME
+--------
+conda deactivate
+cd ~/Franka_MediaPipe_BodyPose_HandGesture_Control
+bash scripts/install.sh
+
+DRY RUN FIRST
+-------------
+bash scripts/run_dry_demo.sh
+
+Keys:
+  C = calibrate neutral right-arm pose
+  A = arm master ON/OFF
+  G = gripper gesture ON/OFF
+  R = reset
+  Q = quit
+
+REAL ROBOT
+----------
+Franka Desk:
+  unlock/recover -> activate FCI -> clear workspace
+
+Terminal 1:
+  bash scripts/start_robot.sh
+
+Terminal 2:
+  bash scripts/start_servo.sh
+
+Terminal 3:
+  bash scripts/check_system.sh
+  bash scripts/enable_servo.sh
+
+Terminal 4:
+  bash scripts/run_real_control.sh
+
+SAFE OPERATING SEQUENCE
+-----------------------
+1. C to calibrate.
+2. G to test thumb-index gripper gesture.
+3. A to arm body control.
+4. Raise LEFT wrist above LEFT shoulder to enable motion.
+5. Small RIGHT hand motion controls XYZ.
+6. Lower LEFT hand to stop arm motion.
+7. Q to quit.
+
+STOP SERVO
+----------
+bash scripts/stop_servo.sh
