@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+build/
+install/
+log/
+.env
+.env.*
+*.pem
+*.key
